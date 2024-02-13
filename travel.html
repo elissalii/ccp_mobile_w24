@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/html5reset.css">
+	<!-- Link to the stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+    <title>Travel</title>
 </head>
 <body>
-    <a href = "#main-content">Skip to Main Content</a>
+    <a href = "#main-content" class="visually-hidden">Skip to Main Content</a>
     <header>
         <nav>
-            <ul>
+            <ul class="main-nav">
                 <li><a href = "index.html">Home</a></li>
                 <li><a href = "pets.html">Pets</a></li>
                 <li><a href = "recipes.html">Recipes</a></li>
-                <li><a href = "travel.html">Travel</a></li>
+                <li class="current-page"><a href = "travel.html">Travel</a></li>
             </ul>
         </nav>
         <h1>Travel</h1>
 
     </header>
-    <main id = "main-content">
+    <main id = "main-content" class="trav">
         <div>
             <h2>Chihuly Garden and Glass</h2>
             <img src="images/chihuly_gif.gif" width = "400" alt="Glass sculpture with water reflection moving">

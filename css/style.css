@@ -1,6 +1,137 @@
 body{
     margin: 5%;
+    background-color: #fffbf6;
 }
 h1{
-    font-family: Courier, Helvetica, Arial";
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: larger;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+    color: #3627db;
+}
+
+h2{
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: large;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+    color: #3627db;
+}
+
+h3{
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: medium;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+    color: #3627db;
+}
+
+p{
+    font-family: sans-serif, Arial, Helvetica;
+    padding: 2px;
+    margin: 0px;
+    color: #000000;
+}
+
+ul{
+    font-family: sans-serif, Arial, Helvetica;
+    list-style: disc;
+    text-align: left;
+    padding: 20px;
+}
+
+
+.visually-hidden {
+    position: absolute !important;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    display: block;
+    text-align: center;
+}
+
+#main-content{
+    display: grid;
+    /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    */
+    gap: 20px;
+}
+
+
+.pets, .recipe, .trav{
+    padding: 5px;
+    border: 1px solid #3627db;
+    display: flex;
+    flex-direction: column;
+}
+
+.pets h2, .recipe h2, .trav h2{
+    margin-top: 0;
+    flex-grow: 0;
+}
+
+.pets img, .pet video, .recipe img, .trav img, .trav video{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .img, .video, .gif {
+        animation: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-nav {
+        list-style-type: none;
+        font-size: medium;
+        margin: 0px;
+        padding: 0px;
+        /*makes navigation horizontal*/
+        display: flex;
+        position: relative;
+        top: initial;
+        left: initial;
+    }
+    
+    .main-nav li {
+        /*spacing between items*/
+        font-family: sans-serif, Arial, Helvetica;
+        margin-right: 3px;
+        padding: 10px;
+        /*boxes between each list item*/
+        
+    }
+    
+    .main-nav li:last-child {
+        /*removes margin from last list item*/
+        margin-right: 0;
+    }
+    
+    .main-nav a {
+        text-decoration: none;
+        color: #3627db;
+        font-weight: bold;
+    }
+    
+    .main-nav a:hover {
+        /*change link color when mouse hover*/
+        color: #454545;
+        text-decoration: underline;
+    }
+
+    .main-nav li.current-page a {
+        text-decoration: underline;
+    }
+
+    #main-content{
+        /*two pets per row on mobile*/
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
